@@ -13,6 +13,7 @@ const SoldiersTable = ({ soldiers }) => {
             <th>ID</th>
             <th>Stopień</th>
             <th>Imię i Nazwisko</th>
+            <th>Specjalizacja</th>
             <th>Jednostka wojskowa</th>
             <th>Status</th>
             <th>Akcje</th>
@@ -21,6 +22,12 @@ const SoldiersTable = ({ soldiers }) => {
         <tbody>
           {soldiers.map((soldier) => {
             const soldierId = soldier.id;
+
+            // Dobieranie koloru odznaki na podstawie statusu tekstowego
+            let statusBadgeColor = 'bg-secondary';
+            if (soldier.status === 'Dostępny') statusBadgeColor = 'bg-success';
+            if (soldier.status === 'Na misji') statusBadgeColor = 'bg-warning text-dark';
+            if (soldier.status === 'Urlop') statusBadgeColor = 'bg-danger';
 
             return (
               <tr key={soldierId}>
@@ -31,13 +38,10 @@ const SoldiersTable = ({ soldiers }) => {
                 <td className="fw-semibold">
                   {soldier.firstName} {soldier.lastName}
                 </td>
+                <td>{soldier.specialization}</td>
                 <td>{soldier.unit}</td>
                 <td>
-                  {soldier.isActive ? (
-                    <span className="badge bg-success">W służbie</span>
-                  ) : (
-                    <span className="badge bg-secondary">Rezerwa</span>
-                  )}
+                  <span className={`badge ${statusBadgeColor}`}>{soldier.status}</span>
                 </td>
                 <td>
                   <Link to={`/soldiers/${soldierId}`} className="btn btn-sm btn-outline-primary">

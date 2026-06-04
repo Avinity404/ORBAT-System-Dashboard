@@ -5,27 +5,124 @@
       "firstName": "Jan",
       "lastName": "Kowalski",
       "rank": "Kapral",
+      "specialization": "Operator drona FPV",
       "unit": "1. Warszawska Brygada Pancerna",
-      "mission": "PKW Łotwa",
-      "isActive": true
+      "missionId": "1",
+      "status": "Na misji"
     },
     {
       "id": "2",
       "firstName": "Adam",
       "lastName": "Nowak",
       "rank": "Porucznik",
+      "specialization": "Żołnierz sił specjalnych",
       "unit": "6. Brygada Powietrznodesantowa",
-      "mission": "Brak",
-      "isActive": true
+      "missionId": "0",
+      "status": "Dostępny"
     },
     {
       "id": "3",
       "firstName": "Piotr",
       "lastName": "Zieliński",
       "rank": "Sierżant",
+      "specialization": "Pilot śmigłowca",
       "unit": "25. Brygada Kawalerii Powietrznej",
-      "mission": "PKW Irak",
-      "isActive": false
+      "missionId": "2",
+      "status": "Na misji"
+    },
+    {
+      "id": "4",
+      "firstName": "Michał",
+      "lastName": "Wiśniewski",
+      "rank": "Szeregowy",
+      "specialization": "Kierowca KTO Rosomak",
+      "unit": "12. Brygada Zmechanizowana",
+      "missionId": "0",
+      "status": "Dostępny"
+    },
+    {
+      "id": "5",
+      "firstName": "Bartosz",
+      "lastName": "Wójcik",
+      "rank": "Starszy Szeregowy",
+      "specialization": "Snajper / Strzelec wyborowy",
+      "unit": "6. Brygada Powietrznodesantowa",
+      "missionId": "0",
+      "status": "Urlop"
+    },
+    {
+      "id": "6",
+      "firstName": "Tomasz",
+      "lastName": "Kamiński",
+      "rank": "Plutonowy",
+      "specialization": "Wsparcie piechoty (operator KM)",
+      "unit": "1. Warszawska Brygada Pancerna",
+      "missionId": "0",
+      "status": "Dostępny"
+    },
+    {
+      "id": "7",
+      "firstName": "Jakub",
+      "lastName": "Lewandowski",
+      "rank": "Szeregowy",
+      "specialization": "Saper / Miner",
+      "unit": "25. Brygada Kawalerii Powietrznej",
+      "missionId": "0",
+      "status": "Dostępny"
+    },
+    {
+      "id": "8",
+      "firstName": "Marcin",
+      "lastName": "Mazur",
+      "rank": "Starszy Szeregowy",
+      "specialization": "Celowniczy PPK Spike",
+      "unit": "12. Brygada Zmechanizowana",
+      "missionId": "0",
+      "status": "Urlop"
+    },
+    {
+      "id": "9",
+      "firstName": "Krzysztof",
+      "lastName": "Kaczmarek",
+      "rank": "Starszy Kapral",
+      "specialization": "Radiotelegrafista / Łącznościowiec",
+      "unit": "18. Dywizja Zmechanizowana",
+      "missionId": "3",
+      "status": "Na misji"
+    },
+    {
+      "id": "10",
+      "firstName": "Paweł",
+      "lastName": "Krawczyk",
+      "rank": "Szeregowy",
+      "specialization": "Ratownik medyczny (Medevac)",
+      "unit": "6. Brygada Powietrznodesantowa",
+      "missionId": "1",
+      "status": "Na misji"
+    }
+  ],
+
+  "missions": [
+    {
+      "id": "1",
+      "name": "PKW Łotwa",
+      "description": "Misja w ramach wzmocnionej Wysuniętej Obecności NATO (eFP) mająca na celu demonstrację solidarności sojuszniczej i wzmocnienie wschodniej flanki.",
+      "location": "Adazi, Łotwa",
+      "leaderUnit": "1. Warszawska Brygada Pancerna"
+    },
+    {
+      "id": "2",
+      "name": "PKW Irak",
+      "description": "Misja szkoleniowo-doradcza w strukturach międzynarodowych sił koalicyjnych, wspierająca budowanie zdolności operacyjnych irackich sił bezpieczeństwa.",
+      "location": "Al Asad, Irak",
+      "leaderUnit": "25. Brygada Kawalerii Powietrznej"
+    },
+    {
+      "id": "3",
+      "name": "PKW Rumunia",
+      "description": "Misja w ramach dostosowanej Wysuniętej Obecności NATO (tFP) ukierunkowana na szkolenie i budowanie interoperacyjności w rejonie Morza Czarnego.",
+      "location": "Craiova, Rumunia",
+      "leaderUnit": "17. Wielkopolska Brygada Zmechanizowana"
     }
   ]
 }

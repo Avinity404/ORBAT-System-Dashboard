@@ -20,8 +20,8 @@ const Login = () => {
   };
 
   return (
-    <section className="app-panel p-4" style={{ maxWidth: 400, margin: '0 auto' }}>
-      <h2 className="mb-4">Logowanie</h2>
+    <div className="card p-4 shadow-sm" style={{ maxWidth: 400, margin: '40px auto' }}>
+      <h2 className="mb-4 text-center">Logowanie do systemu</h2>
 
       {error && <div className="alert alert-danger">{error}</div>}
 
@@ -47,14 +47,14 @@ const Login = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary w-100">
-          Zaloguj
+          Zaloguj się
         </button>
       </form>
 
-      <p className="text-center mt-3 text-muted" style={{ fontSize: '0.8rem' }}>
-        podpowiedź: admin / admin
+      <p className="text-center mt-3 text-muted mb-0" style={{ fontSize: '0.8rem' }}>
+        Konto testowe: admin / admin
       </p>
-    </section>
+    </div>
   );
 };
 

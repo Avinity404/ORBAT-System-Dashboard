@@ -3,44 +3,22 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
     <div className="container">
-      <span className="navbar-brand">ORBAT System</span>
+      <span className="navbar-brand fw-bold">ORBAT System</span>
       <div className="navbar-nav">
-
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            'nav-link' + (isActive ? ' active fw-bold' : '')
-          }
-        >
+        <NavLink to="/" className={({ isActive }) => 'nav-link' + (isActive ? ' active fw-bold' : '')}>
           Strona główna
         </NavLink>
-
-        {/* Zmieniono z /posts na /dashboard */}
-        <NavLink
-          to="/dashboard"
-          className={({ isActive }) =>
-            'nav-link' + (isActive ? ' active fw-bold' : '')
-          }
-        >
-          Dashboard ORBAT
+        <NavLink to="/personnel" className={({ isActive }) => 'nav-link' + (isActive ? ' active fw-bold' : '')}>
+          Personel
         </NavLink>
-
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            'nav-link' + (isActive ? ' active fw-bold' : '')
-          }
-        >
-          O aplikacji
+        <NavLink to="/missions" className={({ isActive }) => 'nav-link' + (isActive ? ' active fw-bold' : '')}>
+          Misje
         </NavLink>
-
-        <NavLink
-          to="/admin"
-          className={({ isActive }) =>
-            'nav-link' + (isActive ? ' active fw-bold' : '')
-          }
-        >
-          Panel administracji
+        <NavLink to="/structure" className={({ isActive }) => 'nav-link' + (isActive ? ' active fw-bold' : '')}>
+          Struktura Sił
+        </NavLink>
+        <NavLink to="/admin" className={({ isActive }) => 'nav-link' + (isActive ? ' active fw-bold' : '')}>
+          Panel Administracji
         </NavLink>
       </div>
     </div>
