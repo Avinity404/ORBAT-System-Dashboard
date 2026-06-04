@@ -1,0 +1,31 @@
+{
+  "soldiers": [
+    {
+      "id": "1",
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "rank": "Kapral",
+      "unit": "1. Warszawska Brygada Pancerna",
+      "mission": "PKW Łotwa",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "firstName": "Adam",
+      "lastName": "Nowak",
+      "rank": "Porucznik",
+      "unit": "6. Brygada Powietrznodesantowa",
+      "mission": "Brak",
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "firstName": "Piotr",
+      "lastName": "Zieliński",
+      "rank": "Sierżant",
+      "unit": "25. Brygada Kawalerii Powietrznej",
+      "mission": "PKW Irak",
+      "isActive": false
+    }
+  ]
+}
