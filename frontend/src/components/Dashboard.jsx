@@ -45,14 +45,15 @@ const Dashboard = () => {
       });
   }, []);
 
+  // --- WYSZUKIWANIE ---
   useEffect(() => {
     const subscription = searchSubject$.pipe(
       map((value) => value.trim().toLowerCase()),
-      debounceTime(300),
+      debounceTime(400),
       distinctUntilChanged()
     ).subscribe((query) => {
       setDebouncedSearch(query);
-      setCurrentPage(1); // Reset strony do 1 po zmianie frazy szukania
+      setCurrentPage(1);
     });
 
     return () => subscription.unsubscribe();
@@ -66,7 +67,7 @@ const Dashboard = () => {
 
   const handleStatusChange = (e) => {
     setStatusVal(e.target.value);
-    setCurrentPage(1); // Reset strony do 1 po zmianie filtra statusu
+    setCurrentPage(1);
   };
 
   const handleReset = () => {
@@ -74,7 +75,7 @@ const Dashboard = () => {
     setStatusVal('Wszystkie');
     setDebouncedSearch('');
     setSortColumn({ path: '', order: 'asc' });
-    setCurrentPage(1); // Reset strony przy całkowitym czyszczeniu bazy
+    setCurrentPage(1);
     searchSubject$.next('');
   };
 
@@ -83,7 +84,7 @@ const Dashboard = () => {
       path,
       order: prev.path === path && prev.order === 'asc' ? 'desc' : 'asc'
     }));
-    setCurrentPage(1); // Dobra praktyka: reset strony przy zmianie kryterium sortowania
+    setCurrentPage(1);
   };
 
   if (error) return <div className="alert alert-danger">Błąd: {error.message}</div>;
@@ -134,7 +135,7 @@ const Dashboard = () => {
       <div className="card bg-light p-3 mb-4 border shadow-sm">
         <div className="row g-3 align-items-end">
           <div className="col-md-5">
-            <label className="form-label fw-semibold text-secondary">Szukaj personelu (RxJS):</label>
+            <label className="form-label fw-semibold text-secondary">Szukaj personelu:</label>
             <input
               type="text"
               className="form-control"

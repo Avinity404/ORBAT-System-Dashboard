@@ -118,9 +118,6 @@ const Admin = () => {
             Zalogowano jako: {user?.name ?? user?.login ?? 'Administrator'}
           </p>
         </div>
-        <button className="btn btn-outline-danger" onClick={handleLogout}>
-          Wyloguj z systemu
-        </button>
       </div>
 
       <hr/>

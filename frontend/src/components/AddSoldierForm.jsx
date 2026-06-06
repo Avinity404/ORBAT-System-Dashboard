@@ -134,7 +134,6 @@ const AddSoldierForm = ({onSoldierAdded}) => {
                 onChange={handleChange}
                 required>
                 <option value="Dostępny">Dostępny</option>
-                <option value="Na misji">Na misji</option>
                 <option value="Urlop">Urlop</option>
               </select>
             </div>

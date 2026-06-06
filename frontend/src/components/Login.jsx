@@ -10,14 +10,23 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-  e.preventDefault();
-  if (login === 'admin' && password === 'admin') {
-    doLogin({login: 'admin', role: 'admin', name: 'Administrator'});
-    navigate('/admin');
-  } else {
-    setError('Nieprawidłowy login lub hasło.');
-  }
-};
+    e.preventDefault();
+    
+    // admin
+    if (login === 'admin' && password === 'admin') {
+      doLogin({ login: 'admin', role: 'admin', name: 'Administrator' });
+      navigate('/admin');
+    } 
+
+    // user
+    else if (login === 'user' && password === 'user') {
+      doLogin({ login: 'user', role: 'user', name: 'Użytkownik upoważniony' });
+      navigate('/');
+    } 
+    else {
+      setError('Nieprawidłowy login lub hasło.');
+    }
+  };
 
   return (
     <div className="card p-4 shadow-sm" style={{ maxWidth: 400, margin: '40px auto' }}>
@@ -33,8 +42,7 @@ const Login = () => {
             type="text"
             className="form-control"
             value={login}
-            onChange={(e) => setLogin(e.target.value)}
-          />
+            onChange={(e) => setLogin(e.target.value)}/>
         </div>
         <div className="mb-3">
           <label htmlFor="password" className="form-label">Hasło</label>
@@ -43,17 +51,12 @@ const Login = () => {
             type="password"
             className="form-control"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+            onChange={(e) => setPassword(e.target.value)}/>
         </div>
         <button type="submit" className="btn btn-primary w-100">
           Zaloguj się
         </button>
       </form>
-
-      <p className="text-center mt-3 text-muted mb-0" style={{ fontSize: '0.8rem' }}>
-        Konto testowe: admin / admin
-      </p>
     </div>
   );
 };

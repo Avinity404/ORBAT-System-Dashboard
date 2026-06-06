@@ -38,9 +38,10 @@ const Home = () => {
         Aplikacja przeznaczona do zarządzania strukturą organizacyjną (Order of Battle), 
         ewidencjonowania personelu wojskowego oraz monitorowania statusu misji.
       </p>
-      <hr />
       
-      <h3 className="mb-3">Szybkie statystyki (Czas rzeczywisty)</h3>
+      <hr/>
+      
+      <h3 className="mb-3">Statystyki czasu rzeczywistego</h3>
       <div className="row g-3">
         <div className="col-md-4">
           <div className="card bg-light p-3 border">
