@@ -1,20 +1,34 @@
 import { Link } from 'react-router-dom';
 
-const SoldiersTable = ({ soldiers }) => {
+const SoldiersTable = ({ soldiers, onSort, sortColumn }) => {
   if (soldiers.length === 0) {
     return <div className="alert alert-warning mb-0">Brak zarejestrowanego personelu.</div>;
   }
 
+  const renderSortIcon = (column) => {
+    if (sortColumn.path !== column) return null;
+    return sortColumn.order === 'asc' ? ' ▲' : ' ▼';
+  };
+
   return (
     <div className="table-responsive">
-      <table className="table table-hover align-middle mb-0">
+      <table className="table table-striped table-hover align-middle mb-0">
         <thead>
-          <tr>
-            <th>ID</th>
-            <th>Stopień</th>
-            <th>Imię i Nazwisko</th>
+          <tr style={{ userSelect:'none'}}>
+            {/* Te kolumny są teraz statyczne - nie mają onClick ani ikon */}
+            <th>#</th>
+            
+            {/* Tylko te dwie kolumny są interaktywne i można je sortować */}
+            <th style={{ cursor: 'pointer' }} onClick={() => onSort('rank')}>
+              Stopień {renderSortIcon('rank')}
+            </th>
+            <th style={{ cursor: 'pointer' }} onClick={() => onSort('name')}>
+              Imię i Nazwisko {renderSortIcon('name')}
+            </th>
+            
+            {/* Reszta kolumn ponownie jest zwykłym tekstem */}
             <th>Specjalizacja</th>
-            <th>Jednostka wojskowa</th>
+            <th>Jednostka</th>
             <th>Status</th>
             <th>Akcje</th>
           </tr>
@@ -23,7 +37,6 @@ const SoldiersTable = ({ soldiers }) => {
           {soldiers.map((soldier) => {
             const soldierId = soldier.id;
 
-            // Dobieranie koloru odznaki na podstawie statusu tekstowego
             let statusBadgeColor = 'bg-secondary';
             if (soldier.status === 'Dostępny') statusBadgeColor = 'bg-success';
             if (soldier.status === 'Na misji') statusBadgeColor = 'bg-warning text-dark';
@@ -58,3 +71,4 @@ const SoldiersTable = ({ soldiers }) => {
 };
 
 export default SoldiersTable;
+

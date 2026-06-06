@@ -37,8 +37,8 @@
       "rank": "Szeregowy",
       "specialization": "Kierowca KTO Rosomak",
       "unit": "12. Brygada Zmechanizowana",
-      "missionId": "0",
-      "status": "Dostępny"
+      "missionId": "2",
+      "status": "Na misji"
     },
     {
       "id": "5",
@@ -95,9 +95,59 @@
       "firstName": "Paweł",
       "lastName": "Krawczyk",
       "rank": "Szeregowy",
-      "specialization": "Ratownik medyczny (Medevac)",
+      "specialization": "Ratownik medyczny",
       "unit": "6. Brygada Powietrznodesantowa",
       "missionId": "1",
+      "status": "Na misji"
+    },
+    {
+      "id": "11",
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "rank": "Kapral",
+      "specialization": "Strzelec Wyborowy",
+      "unit": "12. Brygada Zmechanizowana",
+      "missionId": "0",
+      "status": "Dostępny"
+    },
+    {
+      "id": "12",
+      "firstName": "Anna",
+      "lastName": "Nowak",
+      "rank": "Porucznik",
+      "specialization": "Dowódca Plutonu",
+      "unit": "6. Brygada Powietrznodesantowa",
+      "missionId": "1",
+      "status": "Na misji"
+    },
+    {
+      "id": "13",
+      "firstName": "Piotr",
+      "lastName": "Wiśniewski",
+      "rank": "Starszy Szeregowy",
+      "specialization": "Sanitariusz Medyczny",
+      "unit": "12. Brygada Zmechanizowana",
+      "missionId": "0",
+      "status": "Urlop"
+    },
+    {
+      "id": "14",
+      "firstName": "Michał",
+      "lastName": "Wójcik",
+      "rank": "Sierżant",
+      "specialization": "Łącznościowiec",
+      "unit": "25. Brygada Kawalerii Powietrznej",
+      "missionId": "0",
+      "status": "Dostępny"
+    },
+    {
+      "id": "15",
+      "firstName": "Katarzyna",
+      "lastName": "Kamińska",
+      "rank": "Plutonowy",
+      "specialization": "Logistyk",
+      "unit": "6. Brygada Powietrznodesantowa",
+      "missionId": "3",
       "status": "Na misji"
     }
   ],

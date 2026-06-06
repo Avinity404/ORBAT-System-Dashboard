@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 
 const SoldierDetail = () => {
   const { id } = useParams();
@@ -65,9 +65,14 @@ const SoldierDetail = () => {
         <div className="col-md-6">
           <p className="mb-2"><strong>Przydział jednostki:</strong> {soldier.unit}</p>
           <p className="mb-2"><strong>Aktualna Misja: </strong>
-          
-          <span className="fw-semibold text-primary">{missionName}</span></p>
-
+          {soldier.missionId && soldier.missionId !== "0" ? (
+          <Link to={`/missions/${soldier.missionId}`} className="fw-semibold text-primary text-decoration-none">
+            {missionName}
+          </Link>
+      ) : (
+        <span className="text-muted">{missionName}</span>
+      )}
+          </p>
           <p className="mb-2 text-muted"><strong>Identyfikator systemowy:</strong> {soldier.id}</p>
         </div>
       </div>

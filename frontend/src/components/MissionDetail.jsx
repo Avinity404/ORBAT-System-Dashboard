@@ -97,7 +97,7 @@ const MissionDetail = () => {
         )}
       </div>
 
-      <button className="btn btn-secondary align-self-start" onClick={() => navigate(-1)}>
+      <button className="btn btn-secondary align-self-start" onClick={() => navigate('/missions')}>
         ← Powrót do listy misji
       </button>
     </div>
