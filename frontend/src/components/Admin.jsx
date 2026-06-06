@@ -13,7 +13,7 @@ const Admin = () => {
   return (
     <section className="card p-4 shadow-sm">
       <h2 className="mb-2">Panel Administracyjny</h2>
-      <p className="text-success fw-semibold">Status: Zalogowano jako Administrator / Kapral</p>
+      <p className="text-success fw-semibold">Status: Zalogowano jako Administrator</p>
       <hr />
 
       <div className="alert alert-warning my-3">

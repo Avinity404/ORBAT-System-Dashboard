@@ -1,21 +1,19 @@
 import { useEffect, useState } from 'react';
 
 const Home = () => {
-  // Stany dla danych, ładowania i błędów
   const [soldiers, setSoldiers] = useState([]);
   const [missionsCount, setMissionsCount] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Pobieramy równolegle dane o żołnierzach oraz misjach
     Promise.all([
       fetch('http://localhost:5000/soldiers').then(res => res.json()),
       fetch('http://localhost:5000/missions').then(res => res.json())
     ])
       .then(([soldiersData, missionsData]) => {
         setSoldiers(soldiersData);
-        setMissionsCount(missionsData.length); // Liczba misji z właściwości .length
+        setMissionsCount(missionsData.length);
         setIsLoaded(true);
       })
       .catch(err => {
@@ -27,10 +25,8 @@ const Home = () => {
   if (error) return <div className="alert alert-danger">Błąd ładowania statystyk: {error.message}</div>;
   if (!isLoaded) return <div className="spinner-border text-primary" role="status" />;
 
-  // Dynamiczne wyliczanie statystyk personelu przy użyciu czystego JS (.length oraz .filter)
   const totalSoldiers = soldiers.length;
   
-  // Siły aktywne = żołnierze, którzy mają status "Dostępny" LUB "Na misji" (czyli nie są na urlopie)
   const activeSoldiers = soldiers.filter(
     soldier => soldier.status === 'Dostępny' || soldier.status === 'Na misji'
   ).length;

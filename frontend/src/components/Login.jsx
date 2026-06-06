@@ -10,14 +10,14 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (login === 'admin' && password === 'admin') {
-      doLogin();
-      navigate('/admin');
-    } else {
-      setError('Nieprawidłowy login lub hasło.');
-    }
-  };
+  e.preventDefault();
+  if (login === 'admin' && password === 'admin') {
+    doLogin({login: 'admin', role: 'admin', name: 'Administrator'});
+    navigate('/admin');
+  } else {
+    setError('Nieprawidłowy login lub hasło.');
+  }
+};
 
   return (
     <div className="card p-4 shadow-sm" style={{ maxWidth: 400, margin: '40px auto' }}>
