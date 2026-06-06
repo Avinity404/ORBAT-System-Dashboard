@@ -7,7 +7,7 @@
       "rank": "Kapral",
       "specialization": "Operator drona FPV",
       "unit": "1. Warszawska Brygada Pancerna",
-      "missionId": "1",
+      "missionId": "3",
       "status": "Na misji"
     },
     {
@@ -17,8 +17,8 @@
       "rank": "Porucznik",
       "specialization": "Żołnierz sił specjalnych",
       "unit": "6. Brygada Powietrznodesantowa",
-      "missionId": "0",
-      "status": "Dostępny"
+      "missionId": "1",
+      "status": "Na misji"
     },
     {
       "id": "3",
@@ -97,13 +97,13 @@
       "rank": "Szeregowy",
       "specialization": "Ratownik medyczny",
       "unit": "6. Brygada Powietrznodesantowa",
-      "missionId": "1",
-      "status": "Na misji"
+      "missionId": "0",
+      "status": "Dostępny"
     },
     {
       "id": "11",
       "firstName": "Jan",
-      "lastName": "Kowalski",
+      "lastName": "Kowalkiewicz",
       "rank": "Kapral",
       "specialization": "Strzelec Wyborowy",
       "unit": "12. Brygada Zmechanizowana",
@@ -127,8 +127,8 @@
       "rank": "Starszy Szeregowy",
       "specialization": "Sanitariusz Medyczny",
       "unit": "12. Brygada Zmechanizowana",
-      "missionId": "0",
-      "status": "Urlop"
+      "missionId": "1",
+      "status": "Na misji"
     },
     {
       "id": "14",
@@ -149,9 +149,18 @@
       "unit": "6. Brygada Powietrznodesantowa",
       "missionId": "3",
       "status": "Na misji"
+    },
+    {
+      "id": "16",
+      "firstName": "Michał",
+      "lastName": "Jaroszczyk",
+      "rank": "Starszy Szeregowy",
+      "specialization": "Snajper / Strzelec wyborowy",
+      "unit": "17. Wielkopolska Brygada Zmechanizowana",
+      "missionId": "0",
+      "status": "Dostępny"
     }
   ],
-
   "missions": [
     {
       "id": "1",
@@ -174,5 +183,6 @@
       "location": "Craiova, Rumunia",
       "leaderUnit": "17. Wielkopolska Brygada Zmechanizowana"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

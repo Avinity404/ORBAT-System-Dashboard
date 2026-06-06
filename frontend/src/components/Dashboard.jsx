@@ -89,7 +89,7 @@ const Dashboard = () => {
   if (error) return <div className="alert alert-danger">Błąd: {error.message}</div>;
   if (!isLoaded) return <div className="spinner-border text-primary" role="status" />;
 
-  // --- ETAP 1: FILTROWANIE (RxJS) ---
+  // --- FILTROWANIE ---
   const filteredSoldiers = rawSoldiers.filter(soldier => {
     const matchesStatus = statusVal === 'Wszystkie' || soldier.status === statusVal;
     
@@ -101,7 +101,7 @@ const Dashboard = () => {
     return matchesStatus && matchesSearch;
   });
 
-  // --- ETAP 2: SORTOWANIE (Lab 8) ---
+  // --- SORTOWANIE ---
   const sortedSoldiers = [...filteredSoldiers].sort((a, b) => {
     if (!sortColumn.path) return 0;
 
