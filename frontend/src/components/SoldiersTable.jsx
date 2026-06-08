@@ -15,10 +15,8 @@ const SoldiersTable = ({ soldiers, onSort, sortColumn }) => {
       <table className="table table-striped table-hover align-middle mb-0">
         <thead>
           <tr style={{ userSelect:'none'}}>
-            {/* Te kolumny są teraz statyczne - nie mają onClick ani ikon */}
             <th>#</th>
             
-            {/* Tylko te dwie kolumny są interaktywne i można je sortować */}
             <th style={{ cursor: 'pointer' }} onClick={() => onSort('rank')}>
               Stopień {renderSortIcon('rank')}
             </th>
@@ -26,7 +24,6 @@ const SoldiersTable = ({ soldiers, onSort, sortColumn }) => {
               Imię i Nazwisko {renderSortIcon('name')}
             </th>
             
-            {/* Reszta kolumn ponownie jest zwykłym tekstem */}
             <th>Specjalizacja</th>
             <th>Jednostka</th>
             <th>Status</th>

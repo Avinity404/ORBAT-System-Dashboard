@@ -30,11 +30,11 @@ const App = () => (
           path="/admin"
           element={
             <ProtectedRoute requiredRole="admin">
-              <Admin />
+              <Admin/>
             </ProtectedRoute>
           }/>
 
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </main>
   </AuthProvider>

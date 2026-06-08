@@ -92,7 +92,8 @@ const SoldierDetail = () => {
           {soldier.status}
         </span>
       </div>
-      <hr />
+
+      <hr/>
 
       <div className="row mb-4">
         <div className="col-md-6">
@@ -124,8 +125,6 @@ const SoldierDetail = () => {
 
 
 
-
-      {/*sekcja admina, niewidoczna dla zwykłego user*/}
       {isAdmin && (
         <div className="mt-4 p-3 border rounded bg-light">
           <h6 className="fw-bold mb-1">Panel administratora - przydział do misji</h6>

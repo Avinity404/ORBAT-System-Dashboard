@@ -45,7 +45,9 @@ const Dashboard = () => {
       });
   }, []);
 
+  
   // --- WYSZUKIWANIE ---
+
   useEffect(() => {
     const subscription = searchSubject$.pipe(
       map((value) => value.trim().toLowerCase()),

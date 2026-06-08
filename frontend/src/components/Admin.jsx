@@ -34,11 +34,11 @@ const Admin = () => {
     ]).then(([soldiersData, missions]) => {
       setSoldiers(soldiersData);
       setStats({
-        total:     soldiersData.length,
+        total: soldiersData.length,
         available: soldiersData.filter(s => s.status === 'Dostępny').length,
         onMission: soldiersData.filter(s => s.status === 'Na misji').length,
-        onLeave:   soldiersData.filter(s => s.status === 'Urlop').length,
-        missions:  missions.length,
+        onLeave: soldiersData.filter(s => s.status === 'Urlop').length,
+        missions: missions.length,
       });
     });
   }, []);
@@ -49,7 +49,9 @@ const Admin = () => {
   const [searchError, setSearchError] = useState(null);
 
   const handleSearch = async () => {
-    if (!searchId.trim()) return;
+    if (!searchId.trim())
+      return;
+
     setSearchError(null);
     setFoundSoldier(null);
 

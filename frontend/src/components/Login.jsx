@@ -14,13 +14,13 @@ const Login = () => {
     
     // admin
     if (login === 'admin' && password === 'admin') {
-      doLogin({ login: 'admin', role: 'admin', name: 'Administrator' });
+      doLogin({login: 'admin', role: 'admin', name: 'Administrator'});
       navigate('/admin');
     } 
 
     // user
     else if (login === 'user' && password === 'user') {
-      doLogin({ login: 'user', role: 'user', name: 'Użytkownik upoważniony' });
+      doLogin({login: 'user', role: 'user', name: 'Użytkownik upoważniony'});
       navigate('/');
     } 
     else {

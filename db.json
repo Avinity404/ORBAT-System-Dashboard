@@ -17,8 +17,8 @@
       "rank": "Porucznik",
       "specialization": "Żołnierz sił specjalnych",
       "unit": "6. Brygada Powietrznodesantowa",
-      "missionId": "1",
-      "status": "Na misji"
+      "missionId": "0",
+      "status": "Dostępny"
     },
     {
       "id": "3",
@@ -67,8 +67,8 @@
       "rank": "Szeregowy",
       "specialization": "Saper / Miner",
       "unit": "25. Brygada Kawalerii Powietrznej",
-      "missionId": "0",
-      "status": "Dostępny"
+      "missionId": "2",
+      "status": "Na misji"
     },
     {
       "id": "8",

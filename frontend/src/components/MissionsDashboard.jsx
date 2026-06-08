@@ -22,8 +22,10 @@ const MissionsDashboard = () => {
       });
   }, []);
 
-  if (error) return <div className="alert alert-danger">Błąd systemu: {error.message}</div>;
-  if (!isLoaded) return <div className="spinner-border" role="status" />;
+  if (error)
+    return <div className="alert alert-danger">Błąd systemu: {error.message}</div>;
+  if (!isLoaded)
+    return <div className="spinner-border" role="status"/>;
 
   return (
     <div className="card p-4 shadow-sm">

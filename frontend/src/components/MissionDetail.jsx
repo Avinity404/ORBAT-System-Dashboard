@@ -10,23 +10,20 @@ const MissionDetail = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // 1. Pobieramy dane konkretnej misji
     fetch(`http://localhost:5000/missions/${id}`)
       .then(res => {
-        if (!res.ok) throw new Error('Misja o podanym ID nie istnieje.');
+        if (!res.ok)
+          throw new Error('Misja o podanym ID nie istnieje.');
         return res.json();
       })
       .then(missionData => {
         setMission(missionData);
         
-        // 2. Pobieramy WSZYSTKICH żołnierzy z bazy
         return fetch(`http://localhost:5000/soldiers`);
       })
       .then(res => res.json())
       .then(allSoldiers => {
-        // 3. Filtrujemy żołnierzy ręcznie w JavaScript, upewniając się, że porównujemy stringi
-        const filtered = allSoldiers.filter(
-          soldier => String(soldier.missionId) === String(id)
+        const filtered = allSoldiers.filter(soldier => String(soldier.missionId) === String(id)
         );
         
         setAssignedSoldiers(filtered);
