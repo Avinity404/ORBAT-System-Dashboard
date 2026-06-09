@@ -54,10 +54,9 @@ const Navbar = () => {
             <button className="btn btn-danger" onClick={handleLogout}>
               Wyloguj
             </button>
-            
+        
           </div>
         )}
-
       </div>
     </nav>
   );

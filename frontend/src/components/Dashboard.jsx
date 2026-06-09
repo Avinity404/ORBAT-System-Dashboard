@@ -45,7 +45,7 @@ const Dashboard = () => {
       });
   }, []);
 
-  
+
   // --- WYSZUKIWANIE ---
 
   useEffect(() => {
@@ -89,10 +89,14 @@ const Dashboard = () => {
     setCurrentPage(1);
   };
 
-  if (error) return <div className="alert alert-danger">Błąd: {error.message}</div>;
-  if (!isLoaded) return <div className="spinner-border text-primary" role="status" />;
+  if (error)
+    return <div className="alert alert-danger">Błąd: {error.message}</div>;
+
+  if (!isLoaded)
+    return <div className="spinner-border text-primary" role="status" />;
 
   // --- FILTROWANIE ---
+
   const filteredSoldiers = rawSoldiers.filter(soldier => {
     const matchesStatus = statusVal === 'Wszystkie' || soldier.status === statusVal;
     
@@ -105,6 +109,7 @@ const Dashboard = () => {
   });
 
   // --- SORTOWANIE ---
+  
   const sortedSoldiers = [...filteredSoldiers].sort((a, b) => {
     if (!sortColumn.path) return 0;
 
@@ -168,19 +173,18 @@ const Dashboard = () => {
       <SoldiersTable 
         soldiers={paginatedSoldiers} 
         onSort={handleSort} 
-        sortColumn={sortColumn} 
-      />
+        sortColumn={sortColumn} />
 
       <div className="d-flex justify-content-between align-items-center mt-3 bg-white p-3 border rounded shadow-sm">
         <small className="text-muted fw-semibold">
           Wyświetlasz {paginatedSoldiers.length} z {filteredSoldiers.length} żołnierzy (Strona {currentPage})
         </small>
+
         <Pagination 
           itemsCount={filteredSoldiers.length}
           pageSize={pageSize} 
           currentPage={currentPage} 
-          onPageChange={setCurrentPage} 
-        />
+          onPageChange={setCurrentPage}/>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const SoldiersTable = ({ soldiers, onSort, sortColumn }) => {
   if (soldiers.length === 0) {
-    return <div className="alert alert-warning mb-0">Brak zarejestrowanego personelu.</div>;
+    return <div className="alert alert-warning mb-0">Brak zarejestrowanego personelu!</div>;
   }
 
   const renderSortIcon = (column) => {

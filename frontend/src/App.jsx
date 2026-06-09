@@ -34,7 +34,7 @@ const App = () => (
             </ProtectedRoute>
           }/>
 
-        <Route path="*" element={<NotFound/>} />
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
     </main>
   </AuthProvider>

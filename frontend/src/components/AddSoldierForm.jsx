@@ -16,6 +16,7 @@ const AddSoldierForm = ({ onSoldierAdded }) => {
     setSuccess(false);
 
     // walidacja
+    
     if (!firstName.trim() || !lastName.trim() || !unit.trim() || !specialization.trim()) {
       setError('Błąd operacji: Wszystkie pola formularza są wymagane.');
       return;

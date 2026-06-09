@@ -80,6 +80,7 @@ const SoldierDetail = () => {
   if (!isLoaded) return <div className="spinner-border" role="status" />;
 
   let statusBadgeColor = 'bg-secondary';
+  
   if (soldier.status === 'Dostępny') statusBadgeColor = 'bg-success';
   if (soldier.status === 'Na misji') statusBadgeColor = 'bg-warning text-dark';
   if (soldier.status === 'Urlop') statusBadgeColor = 'bg-danger';

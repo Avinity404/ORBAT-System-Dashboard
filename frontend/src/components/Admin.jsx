@@ -9,6 +9,7 @@ const Admin = () => {
   const [soldiers, setSoldiers] = useState([]);
 
   // --- stats ---
+  
   const [stats, setStats] = useState(null);
 
   const handleSoldierAdded = (newSoldier) => {
