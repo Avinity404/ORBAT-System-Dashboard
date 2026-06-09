@@ -22,8 +22,11 @@ const Home = () => {
       });
   }, []);
 
-  if (error) return <div className="alert alert-danger">Błąd ładowania statystyk: {error.message}</div>;
-  if (!isLoaded) return <div className="spinner-border text-primary" role="status" />;
+  if (error)
+    return <div className="alert alert-danger">Błąd ładowania statystyk: {error.message}</div>;
+
+  if (!isLoaded)
+    return <div className="spinner-border text-primary" role="status" />;
 
   const totalSoldiers = soldiers.length;
   

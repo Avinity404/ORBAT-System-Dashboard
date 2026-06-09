@@ -4,8 +4,7 @@ import { useAuth } from './AuthContext.jsx';
 const ProtectedRoute = ({ children, requiredRole }) => {
   const { isLoggedIn, user } = useAuth();
 
-  if (!isLoggedIn)
-  {
+  if (!isLoggedIn) {
     return <Navigate to="/login" replace />;
   }
 

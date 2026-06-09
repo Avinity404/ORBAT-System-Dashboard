@@ -41,7 +41,7 @@ const Login = () => {
             id="login"
             type="text"
             className="form-control"
-            value={login}
+            value = {login}
             onChange={(e) => setLogin(e.target.value)}/>
         </div>
         <div className="mb-3">

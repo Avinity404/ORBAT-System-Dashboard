@@ -1,3 +1,6 @@
+
+// dane na sztywno
+
 const RANKS = [
   { rank: 'Szeregowy', nato: 'OR-1', desc: 'Podstawowy stopień szeregowego żołnierza.' },
   { rank: 'Starszy Szeregowy', nato: 'OR-2', desc: 'Żołnierz z doświadczeniem bojowym.' },

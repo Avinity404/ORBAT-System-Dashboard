@@ -23,8 +23,7 @@ const MissionDetail = () => {
       })
       .then(res => res.json())
       .then(allSoldiers => {
-        const filtered = allSoldiers.filter(soldier => String(soldier.missionId) === String(id)
-        );
+        const filtered = allSoldiers.filter(soldier => String(soldier.missionId) === String(id));
         
         setAssignedSoldiers(filtered);
         setIsLoaded(true);
